@@ -1,9 +1,13 @@
 require("dotenv").config();
 const fs = require("fs");
 const express = require("express");
+const cors = require("cors");
 const { execSync } = require("child_process");
 
 const app = express();
+
+app.use(cors());
+
 const PORT = 3001;
 const PID_FILE = process.env.PID_FILE;
 
